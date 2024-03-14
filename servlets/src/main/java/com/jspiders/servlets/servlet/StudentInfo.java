@@ -14,21 +14,31 @@ import javax.servlet.http.HttpServletResponse;
 public class StudentInfo extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
-		 int id = Integer.parseInt(req.getParameter("id"));
-		 String name = req.getParameter("name");
-		 String email = req.getParameter("email");
-		 long mobile = Long.parseLong(req.getParameter("mobile"));
-		 int age  = Integer.parseInt(req.getParameter("age"));
-		 
-		 
-		String[] courses = req.getParameterValues("course");
-		    PrintWriter write = resp.getWriter();
-		   write.println(id+"<br>"+name+"<br>"+email+ "<br>"+mobile+"<br>"+age+"<br>");
-		   for(String course : courses) {
-			   write.println(course+"<br>");
-		   }
+				 PrintWriter write = resp.getWriter();
+		
+		      int id = Integer.parseInt(req.getParameter("id"));
+		         String name = req.getParameter("name");
+		         String email = req.getParameter("email");
+		         long mobile = Long.parseLong(req.getParameter("mobile"));
+		         int age = Integer.parseInt(req.getParameter("age"));
+		         
+		         
+		         String[] courses = req.getParameterValues("course");
+		         
+		         write.println("ID "+id+"<br/>");
+		         write.println("Name "+name+"<br/>");
+		         write.println("email "+email+"<br/>");
+		         write.println("Mobile "+mobile+"<br/>");
+		         write.println("age "+age+"<br/>");
+		         
+		         for(String cource : courses) {
+		        	 write.println(cource+"<br/>");
+		         }
+		
 	}
+	
 }
