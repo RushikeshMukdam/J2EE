@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+      
+      <bean class="com.jspiders.sparingcore.beans.Employee2" name="employee1">
+      		<property name="id" value="1"/>
+      		<property name="name" value="Ramesh"/>
+      		<property name="email" value="ramesh@gmail.com"/>
+      		<property name="mobile" value="9281918372"/>
+      		<property name="company2" ref="company1"/>
+      </bean>
+      
+      <bean class="com.jspiders.sparingcore.beans.Employee2" name="employee2">
+      		<property name="id" value="2"/>
+      		<property name="name" value="Ram"/>
+      		<property name="email" value="ram@gmail.com"/>
+      		<property name="mobile" value="9481918372"/>
+      		<property name="company2" ref="company1"/>
+      </bean>
+      
+      <bean class="com.jspiders.sparingcore.beans.Employee2" name="employee3">
+      		<property name="id" value="3"/>
+      		<property name="name" value="Jay"/>
+      		<property name="email" value="jay@gmail.com"/>
+      		<property name="mobile" value="9233918372"/>
+      		<property name="company2" ref="company1"/>
+      </bean>
+  
+  <bean class="com.jspiders.sparingcore.beans.Company2" name="company1">
+      		<property name="id" value="1"/>
+      		<property name="name" value="Tata"/>
+			<property name="loc" value="Pune"/>      
+      </bean>
+      
+      
+</beans>
